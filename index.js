@@ -1,7 +1,7 @@
 const express = require("express"),
     path = require("path"),
     app = express(),
-    puerto = 3000;
+    puerto = process.env.PORT || 3000; // Si está definido en el entorno, usarlo. Si no, el 3000
 
 app.get('/', (peticion, respuesta) => {
     // Podemos acceder a la petición HTTP
